@@ -1,13 +1,14 @@
 import './styles.css';
 
 import { Todo, TodoList } from './classes';
+import { crearTodoHtml } from './js/componentes';
 
 
 
-const todoList = TodoList();
+export const todoList = new TodoList();
 const tarea = new Todo('Aprender laravel');
-const tarea2 = new Todo('Comprar un unicornnio');
-
 todoList.nuevoTodo(tarea);
 
 console.log(todoList);
+
+crearTodoHtml(tarea);

@@ -4,5 +4,5 @@ import {TodoList} from './todo-list.class';
 
 export{
     Todo,
-    TodoList
+    TodoList,
 }
