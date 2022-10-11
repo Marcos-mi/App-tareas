@@ -1,6 +1,13 @@
-import { saludar } from './js/componentes';
 import './styles.css';
 
-const nombre = 'Marcos';
+import { Todo, TodoList } from './classes';
 
-saludar( nombre );
+
+
+const todoList = TodoList();
+const tarea = new Todo('Aprender laravel');
+const tarea2 = new Todo('Comprar un unicornnio');
+
+todoList.nuevoTodo(tarea);
+
+console.log(todoList);
