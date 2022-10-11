@@ -9,7 +9,7 @@ const txtInput = document.querySelector('.new-todo')
 export const crearTodoHtml = (todo) => {
 
     const htmlTodo = 
-    ` <li class="${(todo.completado) ? 'completed' : ''}" data-id=${todo.id}>
+    ` <li class="${(todo.completado) ? 'completed' : ''}" data-id="${todo.id}">
             <div class="view">
                 <input class="toggle" type="checkbox" ${(todo.completado) ? 'checked' : ''}>
                 <label>${todo.tarea}</label>
@@ -24,7 +24,7 @@ export const crearTodoHtml = (todo) => {
         divTodoList.append(div.firstElementChild);
 
         return div.firstElementChild;
-};
+}
 
 //eventos
 
@@ -36,4 +36,17 @@ txtInput.addEventListener('keyup', (event) => {
         crearTodoHtml(nuevoTodo);
         txtInput.value = '';
     }
-})
+});
+
+divTodoList.addEventListener('click', (event) =>{
+
+    const nombreElemento = event.target.localName;
+    const todoElemento = event.target.parentElement.parentElement;
+    const todoId = todoElemento.getAttribute('data-id');
+
+    if(nombreElemento.includes('input')){
+        todoList.marcarCompletado(todoId);
+        todoElemento.classList.toggle('completed');
+    }
+
+});
