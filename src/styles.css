@@ -4,11 +4,11 @@ body {
 	padding: 0;
 }
 footer .fa-linkedin-in{
-    color: #ff4a49;
-    background-color: white;
+    color: white;
+    background-color: #ff4a49;
     font-size: 20px;
     border: 0px;
-    height: 32px;
+    height: 26px;
     width: 32px;
     text-align: center;
     padding: 8px 0 0 0;

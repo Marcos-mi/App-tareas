@@ -6,6 +6,4 @@ import { crearTodoHtml } from './js/componentes';
 
 
 export const todoList = new TodoList();
-crearTodoHtml(tarea);
-
-localStorage.setItem('mi-llave', 'abc123')
+todoList.todos.forEach(crearTodoHtml);
